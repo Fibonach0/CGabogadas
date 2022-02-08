@@ -297,27 +297,27 @@
     <script type="text/javascript">
         function sendEmaila() {
 
-            let namea = valueById('namea')
-            let emaila = valueById('emaila')
-            let subjecta = valueById('subjecta')
-            let texta = valueById('messagea')
+            let name = valueById('namea')
+            let email = valueById('emaila')
+            let subject = valueById('subjecta')
+            let text = valueById('messagea')
 
             Email.send({
                     Host: "smtp.gmail.com",
                     Username: "ignacio.antu@gmail.com",
                     Password: "tqrajfbsvevxeemy",
                     To: 'ignacio.antu@gmail.com',
-                    From: emaila,
-                    Subject: namea + " ; ; " + subjecta,
-                    Body: texta,
+                    From: email,
+                    Subject: name + " ; ; " + subject,
+                    Body: text,
                 })
-                .then(function(messagea) {
+                .then(function(message) {
                     alert("El mensaje se envió correctamente. Muchas gracias! ")
                 });
         }
 
-        function valueById(elementa) {
-            return document.getElementById(elementa).value
+        function valueById(element) {
+            return document.getElementById(element).value
         }
     </script>
 
