@@ -138,21 +138,21 @@
                             <div class="col-lg-6 col-12">
                                 <div class="form-group">
                                     <label for="name">Nombre <small>*</small></label>
-                                    <input id="name" name="name" class="form-control _ge_de_ol" type="text" placeholder="Nombre" required="" aria-required="true">
+                                    <input id="namea" name="namea" class="form-control _ge_de_ol" type="text" placeholder="Nombre" required="" aria-required="true">
                                 </div>
                             </div>
 
                             <div class="col-lg-6 col-12">
                                 <div class="form-group">
                                     <label for="name">Email <small>*</small></label>
-                                    <input id="email" name="email" class="form-control _ge_de_ol" type="text" placeholder="Email" required="" aria-required="true">
+                                    <input id="emaila" name="emaila" class="form-control _ge_de_ol" type="text" placeholder="Email" required="" aria-required="true">
                                 </div>
                             </div>
 
                             <div class="col-lg-6 col-12">
                                 <div class="form-group">
                                     <label for="name">Asunto <small>*</small></label>
-                                    <input id="subject" name="subject" class="form-control _ge_de_ol" type="text" placeholder="Asunto" required="" aria-required="true">
+                                    <input id="subjecta" name="subjecta" class="form-control _ge_de_ol" type="text" placeholder="Asunto" required="" aria-required="true">
                                 </div>
                             </div>
 
@@ -166,7 +166,7 @@
                             <div class="col-12">
                                 <div class="form-group">
                                     <label for="message">Mensaje</label>
-                                    <textarea id="message" name="message" class="form-control required" rows="5" placeholder="Ingresar Mensaje" aria-required="true"></textarea>
+                                    <textarea id="messagea" name="messagea" class="form-control required" rows="5" placeholder="Ingresar Mensaje" aria-required="true"></textarea>
                                 </div>
                             </div>
 
@@ -181,37 +181,6 @@
             </div>
         </div>
     </section>
-    <!-- Email sending-->
-
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script type="text/javascript">
-        function sendEmail() {
-
-            let name = valueById('name')
-            let email = valueById('email')
-            let subject = valueById('subject')
-            let text = valueById('message')
-
-            Email.send({
-                    Host: "smtp.gmail.com",
-                    Username: "ignacio.antu@gmail.com",
-                    Password: "tqrajfbsvevxeemy",
-                    To: 'ignacio.antu@gmail.com',
-                    From: email,
-                    Subject: name + " ; ; " + subject,
-                    Body: text,
-                })
-                .then(function(message) {
-                    alert("El mensaje se envió correctamente. Muchas gracias! ")
-                });
-        }
-
-        function valueById(element) {
-            return document.getElementById(element).value
-        }
-    </script>
-
-    <!-- End Email sending -->
 
     <section class="_lo_bn_cs_we">
         <iframe style="width:100%" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.7761811525033!2d-58.39480014876256!3d-34.60982078036189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccac2cd859503%3A0x75cdafaaef2b946!2sCongreso%20de%20la%20Naci%C3%B3n%20Argentina!5e0!3m2!1ses!2sar!4v1643685843618!5m2!1ses!2sar"
@@ -322,6 +291,37 @@
 
         });
     </script>
+    <!-- Email sending-->
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script type="text/javascript">
+        function sendEmaila() {
+
+            let namea = valueById('namea')
+            let emaila = valueById('emaila')
+            let subjecta = valueById('subjecta')
+            let texta = valueById('messagea')
+
+            Email.send({
+                    Host: "smtp.gmail.com",
+                    Username: "ignacio.antu@gmail.com",
+                    Password: "tqrajfbsvevxeemy",
+                    To: 'ignacio.antu@gmail.com',
+                    From: emaila,
+                    Subject: namea + " ; ; " + subjecta,
+                    Body: texta,
+                })
+                .then(function(messagea) {
+                    alert("El mensaje se envió correctamente. Muchas gracias! ")
+                });
+        }
+
+        function valueById(elementa) {
+            return document.getElementById(elementa).value
+        }
+    </script>
+
+    <!-- End Email sending -->
 </body>
 
 </html>
