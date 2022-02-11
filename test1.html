@@ -266,58 +266,6 @@
 
     <!-- ====================================FOOTER>>>END==================================== -->
 
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-
-    <script>
-        $(document).ready(function() {
-            $('.menu-toggle').click(function() {
-                $('.menu-toggle').toggleClass('active')
-                $('.menu').toggleClass('active')
-            })
-        })
-    </script>
-
-    <script>
-        $(() => {
-
-            //On Scroll Functionality
-            $(window).scroll(() => {
-                var windowTop = $(window).scrollTop();
-                windowTop > 50 ? $('.header-wrapper').addClass('og-hf') : $('.header-wrapper').removeClass('og-hf');
-            });
-        });
-    </script>
-
-    <script>
-        $('.counting').each(function() {
-            var $this = $(this),
-                countTo = $this.attr('data-count');
-
-            $({
-                countNum: $this.text()
-            }).animate({
-                    countNum: countTo
-                },
-
-                {
-
-                    duration: 3000,
-                    easing: 'linear',
-                    step: function() {
-                        $this.text(Math.floor(this.countNum));
-                    },
-                    complete: function() {
-                        $this.text(this.countNum);
-                        //alert('finished');
-                    }
-
-                });
-
-
-        });
-    </script>
 </body>
 
 </html>
